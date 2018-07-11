@@ -1,7 +1,7 @@
 {
-  "name": "cordova-plugin-camera-preview",
-  "version": "0.10.0",
-  "description": "Cordova plugin that allows camera interaction from HTML code for showing camera preview below or on top of the HTML.",
+  "name": "cordova-plugin-tf-lite",
+  "version": "0.1.0",
+  "description": "Cordova plugin that allows image classification from HTML code.",
   "keywords": [
     "cordova",
     "phonegap",
@@ -14,19 +14,22 @@
     "camera",
     "cam",
     "camera-preview",
-    "preview"
+    "preview",
+    "tf-lite",
+    "tensorflow",
+    "image-classification"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cordova-plugin-camera-preview/cordova-plugin-camera-preview"
+    "url": "https://github.com/rahullahoria/cordova-plugin-tf-lite.git"
   },
   "author": {
-    "name": "Weston Ganger",
-    "email": "westonganger@gmail.com",
-    "url": "solidfoundationwebdev.com"
+    "name": "Rahul Lahoria",
+    "email": "rahul_lahoria@yahoo.com",
+    "url": ""
   },
   "license": "Apache 2.0",
-  "homepage": "https://github.com/cordova-plugin-camera-preview/cordova-plugin-camera-preview",
+  "homepage": "https://github.com/rahullahoria/cordova-plugin-tf-lite.git",
   "typings": "typescript/CameraPreview.d.ts",
   "dependencies": {
     "cordova": "*"

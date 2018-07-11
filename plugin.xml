@@ -1,45 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<plugin id="cordova-plugin-camera-preview" version="0.10.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-tf-lite" version="0.10.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 
-   <name>cordova-plugin-camera-preview</name>
-  <description>Cordova plugin that allows camera interaction from HTML code. Show camera preview popup on top of the HTML.</description>
+   <name>cordova-plugin-tf-lite</name>
+  <description>Cordova plugin that allows tf classification interaction from HTML code. </description>
   <license>Apache 2.0</license>
-  <keywords>cordova,phonegap,ecosystem:cordova,cordova-android,cordova-ios,android,ios,ionic,camera,cam,camera-preview,preview</keywords>
-  <repo>https://github.com/cordova-plugin-camera-preview/cordova-plugin-camera-preview.git</repo>
-  <issue>https://github.com/cordova-plugin-camera-preview/cordova-plugin-camera-preview/issues</issue>
+  <keywords>cordova,phonegap,ecosystem:cordova,cordova-android,cordova-ios,android,ios,ionic,tf-lite,tensorflow,image-classification</keywords>
+  <repo>https://github.com/rahullahoria/cordova-plugin-tf-lite.git</repo>
+  <issue>https://github.com/rahullahoria/cordova-plugin-tf-lite/issues</issue>
 
-  <js-module src="www/CameraPreview.js" name="CameraPreview">
-    <clobbers target="CameraPreview" />
+  <js-module src="www/TfLite.js" name="TfLite">
+    <clobbers target="TfLite" />
   </js-module>
 
   <platform name="android">
-    <source-file src="src/android/CameraPreview.java" target-dir="src/com/cordovaplugincamerapreview" />
-    <source-file src="src/android/CameraActivity.java" target-dir="src/com/cordovaplugincamerapreview" />
-    <source-file src="src/android/CustomSurfaceView.java" target-dir="src/com/cordovaplugincamerapreview" />
-    <source-file src="src/android/Preview.java" target-dir="src/com/cordovaplugincamerapreview" />
-    <source-file src="src/android/TapGestureDetector.java" target-dir="src/com/cordovaplugincamerapreview" />
-    <source-file src="src/android/camera_activity.xml" target-dir="res/layout" />
-    <source-file src="src/android/camera_theme.xml" target-dir="res/values" />
-    <source-file src="src/android/camera_ids.xml" target-dir="res/values" />
+    <source-file src="src/android/ImageClassifier.java" target-dir="src/com/livechek/tflite" />
+    
 
     <framework src="com.android.support:exifinterface:25+" />
 
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="CameraPreview">
-        <param name="android-package" value="com.cordovaplugincamerapreview.CameraPreview" />
+      <feature name="TfLite">
+        <param name="android-package" value="com.livechek.TfLite" />
         <param name="onload" value="true" />
       </feature>
-    </config-file>
-
-    <config-file target="AndroidManifest.xml" parent="/manifest">
-      <uses-feature android:name="android.hardware.camera" android:required="true"/>
-      <uses-feature android:name="android.hardware.camera.autofocus" />
-      <uses-permission android:name="android.permission.CAMERA" />
-    </config-file>
-
-    <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <activity android:name="com.cordovaplugincamerapreview.CameraActivity" android:screenOrientation="portrait" android:theme="@style/CameraPreviewTheme" />
     </config-file>
   </platform>
 
