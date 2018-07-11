@@ -15,6 +15,7 @@
 
   <platform name="android">
     <source-file src="src/android/ImageClassifier.java" target-dir="src/com/livechek/tflite" />
+    <source-file src="src/android/TfLite.java" target-dir="src/com/livechek/tflite" />
     
 
     <framework src="com.android.support:exifinterface:25+" />

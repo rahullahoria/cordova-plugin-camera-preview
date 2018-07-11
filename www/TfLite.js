@@ -17,8 +17,8 @@ TfLite.classifyFrameBase64 = function(options, onSuccess, onError) {
     if (!isFunction(onSuccess)) {
         return false;
     }
-    
-    exec(onSuccess, onError, PLUGIN_NAME, "startCamera", [options.base64Img]);
+
+    exec(onSuccess, onError, PLUGIN_NAME, "classifyFrameBase64", [options.base64Img]);
 };
 
 
